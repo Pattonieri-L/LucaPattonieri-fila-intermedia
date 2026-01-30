@@ -1,12 +1,12 @@
   let votoAttuale = 0;
-        const Voto = document.getElementById('voto');
+        const displayVoto = document.getElementById('voto');
 
         function aggiornaVoto(cambio) {
             let nuovoVoto = votoAttuale + cambio;
 
             
             if (nuovoVoto > 10 || nuovoVoto < 0) {
-                alert("Limite raggiunto");
+                alert("TOP!");
                 return;
             }
 
@@ -14,11 +14,19 @@
             displayVoto.innerText = votoAttuale;
 
                   if (votoAttuale >= 6) {
-                Voto.className = 'verde';
+                displayVoto.className = 'verde';
             } else {
-                Voto.className = 'rosso';
+                displayVoto.className = 'rosso';
 
             }
           
             }
+             
+           
+            if (voto === 10) {
+                container.innerHTML += 'TOP!';
+            }
+        
+
+        }
         
